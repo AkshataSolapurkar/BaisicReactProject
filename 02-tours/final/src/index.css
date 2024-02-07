@@ -215,10 +215,14 @@ main {
 .single-tour footer {
   padding: 1.5rem 2rem;
 }
+.Info{
+  padding-bottom: 20px;
+}
 .single-tour .delete-btn {
+  margin-bottom: 20px;
   display: block;
   width: 200px;
-  margin: 1rem auto 0 auto;
+  margin: 1rem auto 20px auto;
   color: var(--clr-red-dark);
   letter-spacing: var(--spacing);
   background: transparent;

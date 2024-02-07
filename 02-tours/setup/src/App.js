@@ -7,6 +7,10 @@ const url = 'https://course-api.com/react-tours-project'
 function App() {
  const [loading,setLoading]=useState(true)
  const [tour,setTour]=useState([])
+ const removeTour = (id)=>{
+   const newtour = tour.filter((tour) => tour.id !== id)
+   setTour(newtour)
+ }
 
  const FetchTour =async ()=>{//there are shit whole chances of error happening here therefore we use the try andc catch method
   setLoading(true)
@@ -32,9 +36,18 @@ function App() {
     <Loading />
   </main>
  }
+ if(tour.length===0){
+  return(
+    <div className='title'>
+      <h2>No Tours Left</h2>
+      <button onClick={()=>FetchTour()} className='btn'>ReLoad Tours</button>
+    </div>
+  )
+ }
  return <main>
-  <Tours Tours={tour}/>
+  <Tours removeTour={removeTour} Tours={tour}/>
  </main>
+ 
 }
 
 export default App
