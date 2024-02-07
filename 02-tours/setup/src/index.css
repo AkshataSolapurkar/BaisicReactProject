@@ -171,12 +171,15 @@ main {
   margin-right: auto;
 }
 
+
+  
 .single-tour {
   background: var(--clr-white);
   border-radius: var(--radius);
-  margin: 2rem 0;
+  padding: 2rem ;
   box-shadow: var(--light-shadow);
   transition: var(--transition);
+  margin-bottom: 2rem;
 }
 .single-tour:hover {
   box-shadow: var(--dark-shadow);
