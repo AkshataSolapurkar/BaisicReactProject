@@ -8,7 +8,7 @@ const Review = () => {
   const randomnumber=()=>{
     let randonnum = Math.floor(Math.random() * people.length) 
     console.log(randonnum);
-    if(randonnum === index){
+    if(randonnum === index){// for the repitation avoidance 
       randonnum = index + 1
     }
     setindex(checknumber(randonnum))
